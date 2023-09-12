@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cifrado Cesar + Binario</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="title">
+        <h2>Cifrado Cesar + Binario</h2>
+        <p>
+          Programa de encriptación y desencriptación con el cifrado de César y
+          conversión binaria.
+          <br />
+          Elige un valor 'k' para el cifrado de César (desplazamiento en el
+          alfabeto) e ingresa el mensaje en el campo de texto.
+          <br />
+          Para desencriptar, simplemente ingresa el mensaje encriptado (en
+          binario) y el mismo valor 'k' en el campo correspondiente.
+        </p>
+      </div>
+
+      <div class="about-center section-center">
+        <article class="about">
+          <div class="btn-container">
+            <button class="tab-btn" data-id="div_encrypt">Encriptar</button>
+            <button class="tab-btn" data-id="div_decrypt">Desencriptar</button>
+          </div>
+          <article class="about-content">
+            <div class="content active" id="div_encrypt">
+              <h4>Encriptar</h4>
+              <form class="encrypt-form" id="form_e">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    class="encrypt"
+                    id="k_value"
+                    placeholder="k: "
+                  />
+                  <br />
+                  <input
+                    type="text"
+                    class="encrypt"
+                    id="text_to_encrypt"
+                    placeholder="Mensaje a encriptar"
+                  />
+                  <br />
+                  <div class="div-btn">
+                    <button type="submit" class="submit-btn">Encriptar</button>
+                  </div>
+                </div>
+              </form>
+              <div class="content" id="encrypted">
+                <h4>Contenido Encriptado</h4>
+              </div>
+            </div>
+            <div class="content" id="div_decrypt">
+              <h4>Desencriptar</h4>
+              <form class="encrypt-form" id="form_d">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    class="encrypt"
+                    placeholder="k: "
+                    id="k_value_d"
+                  />
+                  <br />
+                  <input
+                    type="text"
+                    class="encrypt"
+                    placeholder="Mensaje a desencriptar"
+                    id="text_to_decrypt"
+                  />
+                  <br />
+                  <div class="div-btn">
+                    <button type="submit" class="submit-btn">
+                      Desencriptar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </article>
+        </article>
+      </div>
+    </section>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
