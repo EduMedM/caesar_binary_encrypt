@@ -66,13 +66,13 @@ form_e.addEventListener("submit", (e) => {
   const k_n = parseInt(k, 10);
 
   if (!Number.isInteger(Number(k))) {
-    alert("Por favor, ingrese un número entero válido para 'k'.");
+    alert("Please enter a valid integer for 'k'.");
     return;
   }
 
   const textEncrypted = encrypt(textEncrypt.value, k_n);
   console.log(textEncrypted);
-  showMessage(textEncrypted, "Mensaje Encriptado");
+  showMessage(textEncrypted, "The message has been encrypted.");
 });
 
 form_d.addEventListener("submit", (e) => {
@@ -82,14 +82,14 @@ form_d.addEventListener("submit", (e) => {
   const k_n = parseInt(k, 10);
 
   if (!Number.isInteger(Number(k))) {
-    alert("Por favor, ingrese un número entero válido para 'k'.");
+    alert("Please enter a valid integer for 'k'.");
     return;
   }
 
   const textDecrypted = decrypt(textDecrypt.value, k_n);
   console.log("Estamos desencriptando");
   console.log(textDecrypted);
-  showMessage(textDecrypted, "Mensaje Desencriptado");
+  showMessage(textDecrypted, "The message has been decrypted.");
 });
 
 function showMessage(message, processType) {
@@ -103,7 +103,7 @@ function showMessage(message, processType) {
   element.innerHTML = `<div class="msg-div"><h4>${processType}</h4>
   <p class="title">${message}</p></div>`;
 
-  if (processType === "Mensaje Encriptado") {
+  if (processType === "Encrypted Message") {
     divEncryptMessage.appendChild(element);
     console.log(element);
   } else {
